@@ -1,0 +1,26 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: pod-delete
+  namespace: "pgdemo"
+spec:
+  appinfo:
+    appns: pgdemo
+    applabel: app=pgdemoapp
+    appkind: deployment
+  annotationCheck: "false"
+  engineState: active
+  chaosServiceAccount: pod-delete-sa
+  monitoring: false
+  jobCleanUpPolicy: delete
+  experiments:
+    - name: pod-delete
+      spec:
+        components:
+          env:
+            - name: TOTAL_CHAOS_DURATION
+              value: "30"
+            - name: CHAOS_INTERVAL
+              value: "10"
+            - name: FORCE
+              value: "true"
