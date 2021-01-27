@@ -1678,6 +1678,7 @@ spec:
           - "delete"
           - "deletecollection"
     image: "litmuschaos/go-runner:1.12.0"
+	imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name pod-memory-hog
