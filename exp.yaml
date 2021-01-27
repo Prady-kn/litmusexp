@@ -250,7 +250,7 @@ spec:
           - "patch"
           - "update"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name node-taint
@@ -434,7 +434,7 @@ spec:
           - "get"
           - "list"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name node-restart
@@ -523,7 +523,7 @@ spec:
           - "get"
           - "list"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name node-cpu-hog
@@ -620,7 +620,7 @@ spec:
           - "get"
           - "deletecollection"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name pod-network-corruption
@@ -744,7 +744,7 @@ spec:
           - "delete"
           - "deletecollection"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name pod-delete
@@ -946,7 +946,7 @@ spec:
           - "get"
           - "list"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name node-io-stress
@@ -1049,7 +1049,7 @@ spec:
           - "get"
           - "list"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name node-memory-hog
@@ -1228,7 +1228,7 @@ spec:
           - "get"
           - "list"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name kubelet-service-kill
@@ -1311,7 +1311,7 @@ spec:
           - "list"
           - "patch"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name node-drain
@@ -1388,7 +1388,7 @@ spec:
           - "get"
           - "list"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name node-restart
@@ -1486,7 +1486,7 @@ spec:
           - "delete"
           - "deletecollection"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name disk-fill
@@ -1576,7 +1576,7 @@ spec:
           - "update"
           - "delete"
     image: "litmuschaos/ansible-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ansible-playbook ./experiments/generic/disk_loss/disk_loss_ansible_logic.yml -i /etc/ansible/hosts -vv; exit 0
@@ -1777,7 +1777,7 @@ spec:
           - "get"
           - "list"
     image: "litmuschaos/ansible-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ansible-playbook ./experiments/generic/docker_service_kill/docker_service_kill_ansible_logic.yml -i /etc/ansible/hosts -vv; exit 0
@@ -1852,7 +1852,7 @@ spec:
           - "delete"
           - "deletecollection"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name pod-network-latency
@@ -1974,7 +1974,7 @@ spec:
         - "delete"
         - "deletecollection"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name pod-network-loss
@@ -2099,7 +2099,7 @@ spec:
           - "patch"
           - "update"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name pod-autoscaler
@@ -2177,7 +2177,7 @@ spec:
           - "delete"
           - "deletecollection"
     image: "litmuschaos/go-runner:1.12.0"
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     args:
     - -c
     - ./experiments -name container-kill
