@@ -1,7 +1,7 @@
 apiVersion: litmuschaos.io/v1alpha1
 kind: ChaosEngine
 metadata:
-  name: pod-network-chaos
+  name: pgdemo-network-chaos
   namespace: pgdemo
 spec:
   # It can be delete/retain
